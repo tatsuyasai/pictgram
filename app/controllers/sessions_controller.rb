@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to root_path, success: 'ログインに成功しました'
     else
-      flash.now[:dander] = 'ログインに失敗しました'
+      flash.now[:danger] = 'ログインに失敗しました'
       render :new
     end
   end
@@ -32,4 +32,5 @@ class SessionsController < ApplicationController
   def session_params
     params.require(:session).permit(:email, :password)
   end
+  #　05課題１
 end
