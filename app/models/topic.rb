@@ -9,5 +9,5 @@ class Topic < ApplicationRecord
   
   has_many :favorites
   has_many :favorite_users, through: :favorites, source: 'user'
-  has_many :comments #複数のコメント＋topicが削除されたらコメントも
+  has_many :comments#複数のコメント＋topicが削除されたらコメントも(消した)
 end

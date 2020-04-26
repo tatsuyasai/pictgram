@@ -22,10 +22,19 @@
              <% end %>
              <!-- いいね数表示 --> 
              <%= topic.favorite_users.count %>
+             <!-- コメント機能 -->
+             <%= link_to new_topic_comment_pash(topic_id: topic.id) do %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <% end %>
+            
             <p class="topic-text">
               <%= topic.description %>
             </p>
+            <!-- コメント一覧 -->
+            <% @topic.comments.each do |comment| %>
+            <%= comment.content %>
+            <% end %>
+            
           </div>
         </div>
       </div>
