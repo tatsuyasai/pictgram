@@ -3,16 +3,16 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">コメント</h1>
-        <%= form_for @comment do |f| %>
+        <%= form_for [@topic, @comment] do |f| %>
         <div class="form-group">
           <%= f.label :comment %>
           <%= f.text_area :content, class: 'form-control' %>
         </div>
         
-       <% if logged_in? %>
-        <%= f.submit'コメントする', class: 'btn btn-black btn-block' %>
+         <% if logged_in? %>
+          <%= f.submit'コメントする', class: 'btn btn-black btn-block' %>
+         <% end %>
         <% end %>
-       <% end %>
         
       </div>
     </div>
