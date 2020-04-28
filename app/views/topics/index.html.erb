@@ -31,8 +31,11 @@
               <%= topic.description %>
             </p>
             <!-- コメント一覧 -->
+            <h3 class="topic-comment">コメント</h3>
             <% topic.comments.each do |comment| %>
+            <p class="topic-text">
             <%= comment.content %>
+            </p>
             <% end %>
             
           </div>

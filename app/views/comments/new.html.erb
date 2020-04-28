@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">コメント</h1>
-        <%= form_for [@topic, @comment] do |f| %>
+        <%= form_with model: [@topic, @comment], url: {action: "create"} do |f| %>
         <div class="form-group">
-          <%= f.label :comment %>
+          <%= f.label :content %>
           <%= f.text_area :content, class: 'form-control' %>
         </div>
         
